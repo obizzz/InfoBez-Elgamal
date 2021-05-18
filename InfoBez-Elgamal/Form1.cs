@@ -49,12 +49,14 @@ namespace InfoBez_Elgamal
             }
             Elgamal.InputText = richTextBox_InputText.Text;
             Elgamal.Encrypt();
-            richTextBox_EncryptedText.Text = Elgamal.EncryptedText;
+            richTextBox_A.Text = Elgamal.A.ToString();
+            richTextBox_B.Text = Elgamal.EncryptedText;
         }
 
         private void button_Decrypt_Click(object sender, EventArgs e)
         {
-            Elgamal.EncryptedText = richTextBox_EncryptedText.Text;
+            Elgamal.A = int.Parse(richTextBox_A.Text);
+            Elgamal.EncryptedText = richTextBox_B.Text;
             Elgamal.Decrypt();
             richTextBox_DecryptedText.Text = Elgamal.DecrypredText;
         }

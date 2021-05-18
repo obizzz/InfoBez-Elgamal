@@ -42,7 +42,7 @@
             this.richTextBox_InputText = new System.Windows.Forms.RichTextBox();
             this.button_Encrypt = new System.Windows.Forms.Button();
             this.label_EncryptedText = new System.Windows.Forms.Label();
-            this.richTextBox_EncryptedText = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_A = new System.Windows.Forms.RichTextBox();
             this.button_Decrypt = new System.Windows.Forms.Button();
             this.label_DecryptedText = new System.Windows.Forms.Label();
             this.richTextBox_DecryptedText = new System.Windows.Forms.RichTextBox();
@@ -56,6 +56,8 @@
             this.label_k = new System.Windows.Forms.Label();
             this.textBox_k = new System.Windows.Forms.TextBox();
             this.button_GenerateK = new System.Windows.Forms.Button();
+            this.richTextBox_B = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_P
@@ -184,18 +186,18 @@
             this.label_EncryptedText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_EncryptedText.Location = new System.Drawing.Point(30, 335);
             this.label_EncryptedText.Name = "label_EncryptedText";
-            this.label_EncryptedText.Size = new System.Drawing.Size(110, 18);
+            this.label_EncryptedText.Size = new System.Drawing.Size(23, 18);
             this.label_EncryptedText.TabIndex = 20;
-            this.label_EncryptedText.Text = "Encrypted text:";
+            this.label_EncryptedText.Text = "A:";
             // 
-            // richTextBox_EncryptedText
+            // richTextBox_A
             // 
-            this.richTextBox_EncryptedText.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox_EncryptedText.Location = new System.Drawing.Point(30, 360);
-            this.richTextBox_EncryptedText.Name = "richTextBox_EncryptedText";
-            this.richTextBox_EncryptedText.Size = new System.Drawing.Size(600, 100);
-            this.richTextBox_EncryptedText.TabIndex = 21;
-            this.richTextBox_EncryptedText.Text = "";
+            this.richTextBox_A.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_A.Location = new System.Drawing.Point(30, 360);
+            this.richTextBox_A.Name = "richTextBox_A";
+            this.richTextBox_A.Size = new System.Drawing.Size(290, 100);
+            this.richTextBox_A.TabIndex = 21;
+            this.richTextBox_A.Text = "";
             // 
             // button_Decrypt
             // 
@@ -324,12 +326,32 @@
             this.button_GenerateK.UseVisualStyleBackColor = true;
             this.button_GenerateK.Click += new System.EventHandler(this.button_GenerateK_Click);
             // 
+            // richTextBox_B
+            // 
+            this.richTextBox_B.Location = new System.Drawing.Point(340, 360);
+            this.richTextBox_B.Name = "richTextBox_B";
+            this.richTextBox_B.Size = new System.Drawing.Size(290, 100);
+            this.richTextBox_B.TabIndex = 36;
+            this.richTextBox_B.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F);
+            this.label1.Location = new System.Drawing.Point(340, 335);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 18);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "B:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(734, 641);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.richTextBox_B);
             this.Controls.Add(this.button_GenerateK);
             this.Controls.Add(this.textBox_k);
             this.Controls.Add(this.label_k);
@@ -342,7 +364,7 @@
             this.Controls.Add(this.richTextBox_DecryptedText);
             this.Controls.Add(this.label_DecryptedText);
             this.Controls.Add(this.button_Decrypt);
-            this.Controls.Add(this.richTextBox_EncryptedText);
+            this.Controls.Add(this.richTextBox_A);
             this.Controls.Add(this.label_EncryptedText);
             this.Controls.Add(this.button_Encrypt);
             this.Controls.Add(this.richTextBox_InputText);
@@ -383,7 +405,7 @@
         private System.Windows.Forms.RichTextBox richTextBox_InputText;
         private System.Windows.Forms.Button button_Encrypt;
         private System.Windows.Forms.Label label_EncryptedText;
-        private System.Windows.Forms.RichTextBox richTextBox_EncryptedText;
+        private System.Windows.Forms.RichTextBox richTextBox_A;
         private System.Windows.Forms.Button button_Decrypt;
         private System.Windows.Forms.Label label_DecryptedText;
         private System.Windows.Forms.RichTextBox richTextBox_DecryptedText;
@@ -397,6 +419,8 @@
         private System.Windows.Forms.Label label_k;
         private System.Windows.Forms.TextBox textBox_k;
         private System.Windows.Forms.Button button_GenerateK;
+        private System.Windows.Forms.RichTextBox richTextBox_B;
+        private System.Windows.Forms.Label label1;
     }
 }
 
